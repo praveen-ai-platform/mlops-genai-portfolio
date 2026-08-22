@@ -1,4 +1,4 @@
-# MLOps + GenAI Portfolio (RAG + Reliability)
+# GenAI + Reliability Portfolio (RAG + Privacy)
 
 This repository contains my selected personal projects focused on **GenAI (RAG workflows)**, **privacy-aware pipelines**, and **reliability-first operational engineering**.
 
