@@ -1,32 +1,34 @@
-# GenAI + Reliability Portfolio (RAG + Privacy)
+# GenAI + Reliability Portfolio
 
-This repository contains my selected personal projects focused on **GenAI (RAG workflows)**, **privacy-aware pipelines**, and **reliability-first operational engineering**.
+This repository contains two small, production-minded Python projects focused on
+privacy-safe observability and reliable alert operations.
 
-## 📌 Projects
+## Projects
 
-### 1) RAG Incident Assistant (FastAPI)
-A lightweight RAG-style assistant that retrieves relevant runbook/incident knowledge and provides grounded troubleshooting suggestions for faster triage.
+### Alert Noise Reduction POC
 
-➡️ Folder: `Project-1-RAG-Incident-Assistant/`
+A FastAPI proof of concept that turns a batch of raw alerts into actionable
+events. It suppresses alerts below a selected severity and deduplicates repeated
+service, alert-name, and severity signatures inside a configurable cooldown.
 
----
+Folder: `alert-noise-reduction-poc/`
 
-### 2) PII Detection & Remediation Pipeline (Amazon Comprehend aligned)
-A privacy-aware log processing pipeline that detects PII entities and masks/remediates sensitive values before forwarding logs to observability platforms.
+### PII Detection and Remediation Pipeline
 
-➡️ Folder: `Project-2-PII-Detection-Remediation/`
+A privacy-aware log-processing pipeline that detects PII entities and masks
+sensitive values before the records reach observability tools.
 
----
+Folder: `pii-comprehend-remediation-pipeline/`
 
-## 🔧 Tech Stack
-- AWS (CloudWatch / Lambda / S3) *(project dependent)*
-- FastAPI
-- GenAI (RAG concepts)
-- Amazon Comprehend (PII detection)
-- Observability mindset (SRE/AIOps aligned)
+## Technology
 
-## ✅ Goal of these projects
-To demonstrate production-ready thinking around:
-- reliable deployments
-- safe log pipelines (PII protection)
-- faster incident triage using GenAI workflows
+- Python and FastAPI
+- Pydantic request validation
+- Amazon Comprehend-aligned PII detection
+- Alert deduplication and severity-based suppression
+
+## Purpose
+
+The projects demonstrate a practical reliability workflow: prevent sensitive
+data from leaking through logs and reduce alert fatigue before incidents are
+escalated to responders.
